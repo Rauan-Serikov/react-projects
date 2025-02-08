@@ -1,0 +1,111 @@
+.searchSuggests-list {
+    position: absolute;
+    z-index: 1000;
+    top: 70px;
+    right: 0;
+    width: 559px;
+    max-height: 476px;
+    overflow-y: auto;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    background-color: rgba(57, 59, 60, 1);
+    border-radius: 8px;
+}
+
+.searchSuggests-item {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    padding: 20px 8px;
+    border-radius: 6px;
+}
+
+.searchSuggests-wrapper {
+    display: flex;
+}
+
+.searchSuggests-wrapper_left {
+    width: 40px;
+    height: 52px;
+    background-color: #fff;
+}
+
+.searchSuggests-wrapper_right {
+    flex-direction: column;
+    gap: 4px;
+}
+
+.searchSuggests-image {
+    display: flex;
+    width: 100%;
+}
+
+.searchSuggests-wrapper_right_top {
+    align-items: center;
+    gap: 16px;
+}
+
+.searchSuggests-wrapper_right_bottom {
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.searchSuggests-info {
+    font-size: 14px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.searchSuggests-info_rating {
+    padding: 2px 8px;
+    padding-left: 26px;
+    background-color: rgba(48, 142, 33, 1);
+    background-image: url('../../assets/star.svg');
+    background-position: left 6px center;
+    background-repeat: no-repeat;
+    background-size: 14px;
+    border-radius: 16px;
+    box-sizing: border-box;
+    font-weight: 700;
+    color: #fff;
+}
+
+.searchSuggests-item:hover {
+    outline: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+@media screen and (max-width: 375px) {
+    .searchSuggests-list {
+        width: 100%;
+        flex-direction: row;
+        gap: 16px;
+    }
+
+    .searchSuggests-item {
+        padding: 0;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .searchSuggests-wrapper_right_top {
+        flex-wrap: wrap;
+    }
+
+    .searchSuggests-wrapper_right_bottom {
+        width: 220px;
+        text-align: start;
+    }
+
+    .searchSuggests-wrapper_left {
+        display: flex;
+        width: 158px;
+        height: 256px;
+    }
+
+    .searchSuggests-info {
+        font-size: 12px;
+    }
+}

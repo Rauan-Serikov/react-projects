@@ -1,0 +1,78 @@
+.user {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.user-title {
+    margin: 0;
+    font-size: 48px;
+    font-weight: 700;
+    text-align: left;
+}
+
+.user-wrapper {
+    display: flex;
+    gap: 60px;
+}
+
+.user-sub-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.user-icon {
+    fill: white;
+}
+
+.user-button {
+    display: flex;
+    position: relative;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 400;
+    color: #fff;
+}
+
+.user-button:hover {
+    color: #fff;
+}
+
+.user-button::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: rgba(220, 93, 252, 1);
+    transition: width 0.3s ease;
+}
+
+.user-button:hover::after {
+    width: 100%;
+}
+
+@media screen and (max-width: 375px) {
+    .user {
+        gap: 32px;
+    }
+
+    .user-title {
+        font-size: 24px;
+    }
+
+    .user-wrapper {
+        gap: 26px;
+    }
+
+    .user-sub-wrapper {
+        gap: 8px;
+    }
+
+    .user-button {
+        font-size: 12px;
+    }
+}

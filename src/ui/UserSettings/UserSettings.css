@@ -1,0 +1,82 @@
+.user-settings {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+}
+
+.user-settings-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.user-settings-wrapper_last {
+    margin-bottom: 60px;
+}
+
+.user-settings-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.user-settings-logo_last  {
+    background-image: url('../../assets/mail_white.svg');
+    background-repeat: no-repeat;
+    background-size: 22px 18px;
+    background-position: center;
+}
+
+.user-settings-data {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-settings-key {
+    font-size: 18px;
+    font-weight: 400;
+    text-align: left;
+}
+
+.user-settings-value {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.user-settings .Button.primary {
+    align-self: flex-start;
+}
+
+@media screen and (max-width: 375px) {
+    .user {
+        margin-bottom: 32px;
+    }
+
+    .user-settings-key {
+        font-size: 14px;
+        color: rgba(255, 255, 255, 0.5);
+    }
+
+    .user-settings-value {
+        font-size: 18px;
+    }
+
+    .user-settings-logo {
+        width: 48px;
+        height: 48px;
+    }
+    
+    .user-settings-wrapper_last {
+        margin-bottom: 0;
+    }
+
+    .user-settings .Button.primary {
+        width: 100%;
+    }
+}

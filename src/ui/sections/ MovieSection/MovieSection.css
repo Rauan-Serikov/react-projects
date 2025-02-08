@@ -1,0 +1,104 @@
+.movie {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    justify-content: space-between;
+}
+
+.movie-info {
+    display: flex;
+    gap: 16px;
+    flex-direction: column;
+    width: 48%;
+}
+
+.movie-details {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.movie-details-item {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.movie-details-item_rating {
+    padding: 4px 12px;
+    padding-left: 33px;
+    width: fit-content;
+    background-color: rgba(48, 142, 33, 1);
+    background-image: url('/src/assets/star.svg');
+    background-position: left 10px center;
+    background-repeat: no-repeat;
+    background-size: 16px;
+    border-radius: 16px;
+    box-sizing: border-box;
+    font-weight: 700;
+    color: #fff;
+}
+
+.movie-title {
+    margin: 0;
+    font-size: 48px;
+    font-weight: 700;
+    text-align: left;
+}
+
+.movie-descr {
+    margin: 0;
+    margin-bottom: 32px;
+    font-size: 24px;
+    font-weight: 400;
+    text-align: left;
+}
+
+.movie-buttons-wrapper {
+    display: flex;
+    gap: 16px;
+}
+
+.movie-image {
+    width: 48%;
+    height: 552px;
+    background-color: #fff;
+    border-radius: 16px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media screen and (max-width: 375px) {
+    .movie {
+        flex-direction: column-reverse;
+        gap: 32px;
+    }
+
+    .movie-image,
+    .movie-info,
+    .movie-buttons-wrapper .Button.primary {
+        width: 100%;
+    }
+
+    .movie-image {
+        height: 234px;
+    }
+
+    .movie-details-item {
+        font-size: 14px;
+    }
+
+    .movie-title {
+        font-size: 24px;
+    }
+
+    .movie-descr {
+        font-size: 18px;
+    }
+
+    .movie-buttons-wrapper {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+}

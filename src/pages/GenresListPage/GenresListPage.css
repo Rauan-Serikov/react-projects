@@ -1,0 +1,36 @@
+.genres {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-bottom: 80px;
+}
+
+.genres-title {
+    margin: 0;
+    font-size: 48px;
+    font-weight: 700;
+    text-align: left;
+}
+
+.genres-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    grid-auto-rows: 304px;
+    grid-template-columns: repeat(4, 290px);
+    justify-content: space-between;
+    row-gap: 50px;
+}
+
+@media screen and (max-width: 375px) {
+    .genres-list {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .genres-title {
+        font-size: 24px;
+    }
+}

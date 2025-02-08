@@ -1,0 +1,86 @@
+.login {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.login-form {
+    position: relative;
+    top: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-self: flex-start;
+    gap: 16px;
+    width: 420px;
+    padding: 64px 40px;
+    box-sizing: border-box;
+    background-color: white;
+    border-radius: 24px;
+}
+
+.login-form .Button.primary {
+    display: block;
+    width: 100%;
+}
+
+.login-logo-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.login-logo {
+    display: flex;
+}
+
+.login-logo_title {
+    padding-top: 5px;
+}
+
+.login-input {
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: white;
+    color: black;
+    border: 1px rgba(0, 0, 0, 0.4) solid;
+    border-radius: 8px;
+    font-size: 16px;
+    padding: 16px 16px 16px 56px;
+    background-position: left 16px center;
+    background-repeat: no-repeat;
+    background-size: 22px 18px;
+}
+
+.login-input_email {
+    background-image: url('../../assets/mail.svg');
+}
+
+.login-input_password {
+    background-image: url('../../assets/key.svg');
+}
+
+.login-input ::placeholder {
+    color: rgba(0, 0, 0, 0.4);
+
+}
+
+@media screen and (max-width: 375px) {
+    .login-form {
+        width: 335px;
+        padding: 64px 20px 32px 20px;
+    }
+
+    .login-form .Button.x {
+        background-size: 18px;
+        top: 16px;
+        right: 16px;
+    }
+}

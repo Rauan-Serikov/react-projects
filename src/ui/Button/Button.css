@@ -1,0 +1,75 @@
+.Button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 28px;
+    padding: 16px 48px;
+    font-size: 18px;
+    font-weight: 700;
+    font-family: inherit;
+    transition: background 0.25s;
+}
+
+.Button.primary {
+    background-color: #fff;
+    border: none;
+    color: #000;
+}
+
+.Button.secondary {
+    background: rgba(57, 59, 60, 1);
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    color: #fff;
+}
+
+.Button.withIcon {
+    padding: 0;
+    background: rgba(57, 59, 60, 1);
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    color: #fff;
+    width: 68px;
+    height: 56px;
+    box-sizing: border-box;
+}
+
+.Button.submit {
+    background-color: #fff;
+    border: none;
+    color: #000;
+}
+
+.Button:hover {
+    background: rgba(103, 165, 235, 1);
+    border-color: rgba(103, 165, 235, 1);
+    color: #fff;
+}
+
+.Button:focus,
+.Button:focus-visible {
+    outline: none;
+}
+
+.Button.x {
+    position: absolute;
+    top: 0;
+    right: -60px;
+    border: none;
+    border-radius: 50%;
+    padding: 16px;
+    background-color: #fff;
+    background-image: url('../../assets/x.svg');
+    background-repeat: no-repeat;
+    background-size: 12px;
+    background-position: center;
+}
+
+.Button.mobile-icon {
+    padding: 0;
+    background: none;
+}
+
+@media screen and (max-width: 375px) {
+    .Button.withIcon {
+        padding: 16px 32px;
+    }
+}

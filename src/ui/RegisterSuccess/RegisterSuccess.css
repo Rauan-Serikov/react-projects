@@ -1,0 +1,81 @@
+.register-success-form {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.register-success-form .Button.x {
+    position: absolute;
+    top: 0;
+    right: -60px;
+    display: flex;
+    align-self: flex-start;
+}
+
+.register-success-wrapper {
+    margin-top: 100px;
+    position: relative;
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+    align-self: flex-start;
+    width: 420px;
+    padding: 60px 40px 40px 40px;
+    background-color: #fff;
+    border-radius: 24px;
+}
+
+.register-success-title {
+    margin: 0;
+    margin-bottom: 24px;
+    align-self: center;
+    font-size: 24px;
+    font-weight: 700;
+    color: #000;
+}
+
+.register-success-text {
+    margin: 0;
+    margin-bottom: 24px;
+    color: #000;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.register-success-wrapper .register-success-logo-wrapper {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    margin-bottom: 40px;
+}
+
+.register-success-logo_title {
+    padding-top: 8px;
+}
+
+.register-success-wrapper .Button.primary {
+    width: 100%;
+}
+
+@media screen and (max-width: 375px) {
+    .register-success-wrapper {
+        width: 335px;
+        padding: 64px 20px 32px 20px;
+    }
+
+    .register-success-form .Button.x {
+        background-size: 18px;
+        top: 16px;
+        right: 16px;
+    }
+}

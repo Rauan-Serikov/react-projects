@@ -1,0 +1,62 @@
+.about-movie {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.about-movie-title {
+    margin: 0;
+    font-size: 48px;
+    font-weight: 700;
+    text-align: left;
+}
+
+.about-movie-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.about-movie-wrapper {
+    width: 1000px;
+    display: grid;
+    grid-template-columns: auto 1fr 600px;
+    gap: 8px;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.dots {
+    border-bottom: 1px dotted #ccc;
+    width: 100%;
+}
+
+.about-movie-value {
+    text-align: left;
+}
+
+@media screen and (max-width: 375px) {
+    :where(.movie-page) .movie-buttons-wrapper {
+        flex-wrap: nowrap;
+    }
+
+    .about-movie-title {
+        font-size: 24px;
+    }
+
+    .about-movie-wrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .dots {
+        display: none;
+    }
+
+    .about-movie-key {
+        font-size: 14px;
+        color: rgba(255, 255, 255, 0.5);
+    }
+}

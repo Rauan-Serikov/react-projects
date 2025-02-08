@@ -1,0 +1,44 @@
+.favorite-movies-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    grid-auto-rows: 336px;
+    grid-template-columns: repeat(5, 224px);
+    justify-content: space-between;
+    row-gap: 50px;
+}
+
+.favorite-movie-item {
+    position: relative;
+}
+
+.favorite-movie-item .Button.x {
+    display: none;
+    position: absolute;
+    top: -12px;
+    right: -12px;
+}
+
+.Button.primary {
+    width: fit-content;
+    display: flex;
+    align-self: center;
+}
+
+.favorite-movie-item:hover {
+    outline: 1px solid #fff;
+    border-radius: 16px;
+}
+
+.favorite-movie-item:hover .Button.x{
+    display: block;
+}
+
+@media screen and (max-width: 375px) {
+    .favorite-movies-list {
+        display: flex;
+        gap: 16px;
+        overflow-x: auto;
+    }
+}

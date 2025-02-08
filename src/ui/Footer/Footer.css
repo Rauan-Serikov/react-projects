@@ -1,0 +1,17 @@
+.footer {
+    max-width: 1280px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 28px;
+}
+
+.footer-link {
+    display: flex;
+}
+
+@media screen and (max-width: 375px) {
+    .footer {
+        justify-content: flex-start;
+    }
+}
