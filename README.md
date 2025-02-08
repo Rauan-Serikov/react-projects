@@ -1,50 +1,74 @@
-# React + TypeScript + Vite
+# VK Маруся – Онлайн-платформа для поиска и оценки фильмов
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Этот проект представляет собой бета-версию стримингового сервиса "VK Маруся", позволяющего пользователям искать фильмы, добавлять их в избранное и ставить оценки. Проект реализован в рамках сотрудничества с IT-компанией VK.
 
-Currently, two official plugins are available:
+## Выполненные задачи
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### 1. **Разработка основных страниц**
+- Главная страница с дашбордом, на котором можно:
+  - посмотреть случайный фильм с описанием;
+  - увидеть топ-10 фильмов по IMDb-рейтингу.
+- Страница со списком жанров, представленных в виде карточек.
+- Страница конкретного жанра с фильмами, отфильтрованными по жанру.
+- Страница фильма с:
+  - полной информацией;
+  - кнопкой для просмотра трейлера;
+  - возможностью добавления фильма в избранное.
+- Страница аккаунта пользователя с информацией о нем и списком избранных фильмов.
 
-## Expanding the ESLint configuration
+### 2. **Реализация функционала поиска и избранного**
+- Реализован поиск фильмов по названию.
+- Пользователи могут добавлять и удалять фильмы из избранного (только после авторизации).
+- При попытке добавить фильм без авторизации открывается модальное окно входа.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### 3. **Авторизация и управление сессиями**
+- Вход и регистрация через форму в модальном окне.
+- Использование cookies для хранения сессий.
+- При обновлении страницы авторизация не сбрасывается.
+- Реализована возможность выхода из аккаунта.
 
-- Configure the top-level `parserOptions` property like this:
+### 4. **Интеграция API и работа с данными**
+- Подключение к API CinemaGuide для получения информации о фильмах и жанрах.
+- Реализованы асинхронные запросы с обработкой ошибок.
+- Загрузка данных с сервера с использованием React Query/Axios.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+### 5. **Дополнительные функции и улучшения**
+- Возможность выбора случайного фильма.
+- Поддержка бесконечной прокрутки на страницах жанров.
+- Реализация плавных переходов и анимации интерфейса.
+- Прелоадеры для асинхронных действий (авторизация, загрузка фильмов).
+- Валидация форм регистрации и входа с подсветкой ошибок.
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Технологический стек
+- **Фреймворк:** React (17-18) + TypeScript
+- **Состояние:** Redux
+- **Запросы к API:** Axios
+- **Маршрутизация:** React Router
+- **Стилизация:** CSS
+- **Хранилище сессий:** Cookies
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+## Установка и запуск
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+1. Клонируйте репозиторий:
+   ```sh
+   git clone https://github.com/Rauan-Serikov/react-projects.git
+   ```
+
+2. Установите зависимости:
+   ```sh
+   npm install
+   ```
+
+3. Запустите проект в режиме разработки:
+   ```sh
+   npm run dev
+   ```
+
+4. Откройте в браузере:
+   ```
+   http://localhost:3000
+   ```
+
+## Заключение
+
+Проект представляет собой удобную онлайн-платформу для поиска и оценки фильмов. В нем реализованы основные функции, соответствующие макетам Figma и техническому заданию. Код организован по стайлгайду.
