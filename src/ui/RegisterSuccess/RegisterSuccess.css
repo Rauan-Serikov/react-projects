@@ -71,6 +71,7 @@
     .register-success-wrapper {
         width: 335px;
         padding: 64px 20px 32px 20px;
+        justify-self: center;
     }
 
     .register-success-form .Button.x {
