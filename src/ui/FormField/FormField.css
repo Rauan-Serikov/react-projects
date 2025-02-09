@@ -17,7 +17,7 @@
   font-weight: 400;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 430px) {
   .form-field:last-of-type {
     margin-bottom: 0;
   }

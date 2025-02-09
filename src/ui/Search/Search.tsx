@@ -32,7 +32,7 @@ const Search = ({ onFocus, onBlur }: { onFocus: () => void; onBlur: () => void }
           value={searchInput}
           onChange={handleInputChange}
           onFocus={onFocus}
-          onBlur={() => setTimeout(onBlur, 200)}
+          onBlur={onBlur}
         />
       </div>
 

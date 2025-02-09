@@ -10,7 +10,7 @@
     display: flex;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 430px) {
     .footer {
         justify-content: flex-start;
     }

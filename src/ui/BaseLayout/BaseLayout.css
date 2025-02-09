@@ -5,7 +5,7 @@
     padding: 24px 0;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 430px) {
     .layout {
         gap: 32px;
     }

@@ -55,7 +55,7 @@
     display: block;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 430px) {
     .search-wrapper {
         width: 100%;
     }

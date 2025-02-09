@@ -35,7 +35,7 @@
     text-align: left;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 430px) {
     :where(.movie-page) .movie-buttons-wrapper {
         flex-wrap: nowrap;
     }

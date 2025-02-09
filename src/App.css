@@ -41,7 +41,7 @@
   color: #888;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 430px) {
   #root {
     padding: 1rem;
   }

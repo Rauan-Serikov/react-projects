@@ -73,7 +73,7 @@
     background-image: url('../../assets/key.svg');
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 430px) {
     .register-form {
         width: 335px;
         padding: 64px 20px 32px 20px;

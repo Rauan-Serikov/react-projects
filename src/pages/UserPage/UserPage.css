@@ -55,7 +55,7 @@
     width: 100%;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 430px) {
     .user {
         gap: 32px;
     }

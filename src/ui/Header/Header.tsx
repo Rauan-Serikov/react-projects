@@ -1,4 +1,4 @@
-import { FC, useState } from "react";
+import { FC, useState, useEffect, useRef } from "react";
 import "./Header.css";
 import { useSelector, useDispatch } from "react-redux";
 import { RootState } from "../../state/store";
@@ -17,6 +17,25 @@ const Header: FC = () => {
   const { isAuthenticated, isLoading, name } = useSelector((state: RootState) => state.user);
 
   const [isSearchVisible, setSearchVisible] = useState(false);
+  const searchContainerRef = useRef<HTMLDivElement>(null);
+  const searchButtonRef = useRef<HTMLButtonElement>(null);
+
+  const closeSearch = (e: MouseEvent) => {
+    if (searchButtonRef.current && searchButtonRef.current.contains(e.target as Node)) {
+      return;
+    }
+
+    if (searchContainerRef.current && !searchContainerRef.current.contains(e.target as Node)) {
+      setSearchVisible(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("click", closeSearch);
+    return () => {
+      document.removeEventListener("click", closeSearch);
+    };
+  }, []);
 
   if (isLoading) return null;
 
@@ -30,7 +49,7 @@ const Header: FC = () => {
       <NavLink className="nav-item" to="/">Главная</NavLink>
       <NavLink className="nav-item" to="/genres">Жанры</NavLink>
 
-      <div className={`search-container ${isSearchVisible ? "visible" : ""}`}>
+      <div className={`search-container ${isSearchVisible ? "visible" : ""}`} ref={searchContainerRef}>
         <Search
           onFocus={() => setSearchVisible(true)}
           onBlur={() => setSearchVisible(false)}
@@ -44,6 +63,7 @@ const Header: FC = () => {
       <Button
         type="mobile-icon"
         onClick={() => setSearchVisible(!isSearchVisible)}
+        ref={searchButtonRef}
       >
         <img src={search_mobile} alt="search" />
       </Button>
