@@ -74,10 +74,14 @@
 }
 
 @media screen and (max-width: 430px) {
+    .register {
+        display: flex;
+        justify-content: center;
+    }
+
     .register-form {
         width: 335px;
         padding: 64px 20px 32px 20px;
-        justify-self: center;
     }
 
     .register-form .Button.x {
